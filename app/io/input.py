@@ -23,13 +23,14 @@ def read_file_default(filename):
     Returns:
         str: the content of the file as a string.
 
+    Raises:
+        FileNotFoundError: if the file does not exist
+
     """
-    try:
-        with open(filename, 'r') as file:
-            file_content = file.read()
-            return file_content
-    except FileNotFoundError:
-        print(f'File {filename} was not found')
+
+    with open(filename, 'r') as file:
+        file_content = file.read()
+        return file_content
 
 
 def read_file_pd(filename):
@@ -42,9 +43,9 @@ def read_file_pd(filename):
     Returns:
         str: the content of the file as a string.
 
+    Raises:
+        FileNotFoundError: if the file does not exist
+
     """
-    try:
-        file_content = pd.read_csv(filename)
-        return file_content
-    except FileNotFoundError:
-        print(f'File {filename} was not found')
+    file_content = pd.read_csv(filename)
+    return file_content
