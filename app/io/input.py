@@ -33,7 +33,7 @@ def read_file_default(filename):
         return file_content
 
 
-def read_file_pd(filename):
+def read_csv_file_pd(filename):
     """
     Reads a CSV file using pandas package.
 
@@ -45,7 +45,9 @@ def read_file_pd(filename):
 
     Raises:
         FileNotFoundError: if the file does not exist
+        pandas.errors.EmptyDataError: if there are no columns to parse from file
+
 
     """
     file_content = pd.read_csv(filename)
-    return file_content
+    return file_content.to_string()

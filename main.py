@@ -15,7 +15,7 @@ def main():
 
     print('=' * 40)
 
-    file_inp_pd = inp.read_file_default('./data/pd_test.csv')
+    file_inp_pd = inp.read_csv_file_pd('./data/pd_test.csv')
     out.console_output(file_inp_pd)
     out.file_output_default(file_inp_pd, './data/def_pd_out.txt')
 
