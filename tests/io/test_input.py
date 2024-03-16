@@ -1,6 +1,6 @@
-import pandas as pd
 import pandas.errors
 import pytest
+
 import app.io.input as inp
 
 
